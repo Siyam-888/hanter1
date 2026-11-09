@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HUNTER CLOUD HQ — Premium Digital Products & VPS Hosting</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Font Inter & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        neon: {
+                            DEFAULT: '#00ff99',
+                            hover: '#00cc7a',
+                            glow: 'rgba(0, 255, 153, 0.25)',
+                            dark: '#00331f'
+                        },
+                        cyber: {
+                            black: '#080b10',
+                            card: '#0f172a',
+                            border: '#1e293b',
+                            accent: '#ff0055'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #06090e;
+            color: #e2e8f0;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Ambient Glow & Cyber Grids */
+        .cyber-grid {
+            background-image: radial-gradient(rgba(0, 255, 153, 0.08) 1px, transparent 0);
+            background-size: 30px 30px;
+        }
+
+        .glow-effect {
+            box-shadow: 0 0 25px rgba(0, 255, 153, 0.15);
+        }
+
+        .glow-effect-pink {
+            box-shadow: 0 0 25px rgba(255, 0, 85, 0.2);
+        }
+
+        .glass-panel {
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .glass-panel:hover {
+            border-color: rgba(0, 255, 153, 0.4);
+        }
+
+        .neon-text-glow {
+            text-shadow: 0 0 12px rgba(0, 255, 153, 0.6);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #080b10;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1e293b;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #00ff99;
+        }
+    </style>
+</head>
+<body class="cyber-grid antialiased">
+
+    <!-- Top Navigation Bar -->
+    <nav class="fixed top-0 left-0 w-full z-50 glass-panel border-b border-slate-800/80 px-4 md:px-8 py-3.5 transition-all">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl bg-neon/10 border border-neon/30 flex items-center justify-center text-neon font-bold text-xl group-hover:scale-105 transition-transform">
+                    👑
+                </div>
+                <div>
+                    <span class="font-extrabold text-lg tracking-wider text-white flex items-center gap-2">
+                        HUNTER CLOUD <span class="text-neon text-xs px-2 py-0.5 rounded bg-neon/10 border border-neon/30">HQ</span>
+                    </span>
+                    <span class="block text-[10px] text-slate-400 font-mono tracking-widest uppercase">Digital Tools & VPS</span>
+                </div>
+            </a>
+
+            <!-- Quick Links -->
+            <div class="hidden md:flex items-center gap-6 font-mono text-xs uppercase tracking-wider text-slate-300">
+                <a href="#overview" class="hover:text-neon transition-colors">Overview</a>
+                <a href="#tools" class="hover:text-neon transition-colors">Tools</a>
+                <a href="#vps" class="hover:text-neon transition-colors">VPS Hosting</a>
+                <a href="#plans" class="hover:text-neon transition-colors">Pricing</a>
+                <a href="#demos" class="hover:text-neon transition-colors">Demos</a>
+            </div>
+
+            <!-- CTA Header Button -->
+            <a href="https://t.me/Hunter_Rok" target="_blank" class="px-4 py-2 rounded-lg bg-neon text-slate-950 font-bold text-xs uppercase tracking-wider hover:bg-neon-hover transition-all flex items-center gap-2 glow-effect">
+                <i class="fa-paper-plane"></i> Contact Admin
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 md:pt-44 md:pb-32 px-4 overflow-hidden">
+        <!-- Background Ambient Glow Circles -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-neon/10 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="absolute top-1/3 right-10 w-[300px] h-[300px] bg-cyber-accent/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <div class="max-w-5xl mx-auto text-center relative z-10">
+            <!-- Badge -->
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900/90 border border-neon/40 text-neon text-xs font-mono mb-6 shadow-lg">
+                <span class="w-2 h-2 rounded-full bg-neon animate-pulse"></span>
+                PREMIUM QUALITY • BEST PRODUCTS IN THE MARKET
+            </div>
+
+            <!-- Hero Heading -->
+            <h1 class="text-4xl md:text-7xl font-extrabold text-white tracking-tight mb-6 leading-tight">
+                👑 HUNTER CLOUD <span class="text-transparent bg-clip-text bg-gradient-to-r from-neon via-emerald-400 to-cyan-400 neon-text-glow">HQ</span>
+            </h1>
+
+            <p class="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto mb-10 font-light leading-relaxed">
+                Premium Digital Products • Inbox Checkers • Private Cloud Workspace & High-Performance VPS Servers.
+            </p>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-wrap items-center justify-center gap-4">
+                <a href="https://t.me/Hunter_Rok" target="_blank" class="px-8 py-4 rounded-xl bg-neon text-slate-950 font-extrabold text-sm uppercase tracking-wider hover:bg-neon-hover transition-all flex items-center gap-3 glow-effect hover:scale-105">
+                    <i class="fa-brands fa-telegram text-lg"></i> Contact @Hunter_Rok
+                </a>
+                <a href="https://t.me/HunterCloud_Hub" target="_blank" class="px-8 py-4 rounded-xl glass-panel text-white font-bold text-sm uppercase tracking-wider hover:border-neon transition-all flex items-center gap-3 hover:scale-105">
+                    <i class="fa-solid fa-bullhorn text-neon"></i> Telegram Channel
+                </a>
+                <a href="https://t.me/HunterCloudreview" target="_blank" class="px-8 py-4 rounded-xl glass-panel text-amber-400 font-bold text-sm uppercase tracking-wider hover:border-amber-400/50 transition-all flex items-center gap-3 hover:scale-105">
+                    <i class="fa-solid fa-star"></i> Reviews
+                </a>
+            </div>
+
+            <!-- Quick Status Cards -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 text-left">
+                <div class="glass-panel p-4 rounded-xl border-l-4 border-l-neon">
+                    <div class="text-xs text-slate-400 font-mono uppercase">Daily UHQ Hotmail & Mix</data></div>
+                    <div class="text-xl md:text-2xl font-bold text-white mt-1">5K - 25K</div>
+                </div>
+                <div class="glass-panel p-4 rounded-xl border-l-4 border-cyan-400">
+                    <div class="text-xs text-slate-400 font-mono uppercase">Uptime Ratio</div>
+                    <div class="text-xl md:text-2xl font-bold text-white mt-1">99.9% High Speed</div>
+                </div>
+                <div class="glass-panel p-4 rounded-xl border-l-4 border-emerald-400">
+                    <div class="text-xs text-slate-400 font-mono uppercase">VPS Port Speed</div>
+                    <div class="text-xl md:text-2xl font-bold text-white mt-1">10 Gbps Port</div>
+                </div>
+                <div class="glass-panel p-4 rounded-xl border-l-4 border-cyber-accent">
+                    <div class="text-xs text-slate-400 font-mono uppercase">Support</div>
+                    <div class="text-xl md:text-2xl font-bold text-white mt-1">24/7 Dedicated</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workspace Overview Section -->
+    <section id="overview" class="py-16 px-4 max-w-7xl mx-auto">
+        <div class="glass-panel p-8 md:p-10 rounded-3xl border border-neon/20 relative overflow-hidden">
+            <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-neon/5 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8">
+                <div>
+                    <span class="text-neon text-xs font-mono tracking-widest uppercase block mb-1">⚡ Private Cloud Storage</span>
+                    <h2 class="text-3xl font-bold text-white flex items-center gap-3">
+                        <i class="fa-solid fa-database text-neon"></i> WORKSPACE OVERVIEW
+                    </h2>
+                </div>
+                <div class="px-4 py-2 rounded-lg bg-neon/10 border border-neon/30 text-neon text-xs font-mono inline-block">
+                    Auto-Updated Daily Access
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800">
+                    <div class="w-10 h-10 rounded-lg bg-neon/10 text-neon flex items-center justify-center text-xl mb-4">⚡</div>
+                    <h3 class="text-white font-semibold text-lg mb-2">5K–25K Fresh Data</h3>
+                    <p class="text-slate-400 text-sm">Fresh UHQ Hotmail & Mix files shared daily inside private cloud channels.</p>
+                </div>
+                <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800">
+                    <div class="w-10 h-10 rounded-lg bg-cyan-400/10 text-cyan-400 flex items-center justify-center text-xl mb-4">↗️</div>
+                    <h3 class="text-white font-semibold text-lg mb-2">Curated Quality</h3>
+                    <p class="text-slate-400 text-sm">Strictly checked & verified content ensuring authorized testing efficiency.</p>
+                </div>
+                <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800">
+                    <div class="w-10 h-10 rounded-lg bg-emerald-400/10 text-emerald-400 flex items-center justify-center text-xl mb-4">🌍</div>
+                    <h3 class="text-white font-semibold text-lg mb-2">Global Sources</h3>
+                    <p class="text-slate-400 text-sm">Multiple international sources collected for high variety data coverage.</p>
+                </div>
+                <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800">
+                    <div class="w-10 h-10 rounded-lg bg-amber-400/10 text-amber-400 flex items-center justify-center text-xl mb-4">🛡️</div>
+                    <h3 class="text-white font-semibold text-lg mb-2">Private Workspace</h3>
+                    <p class="text-slate-400 text-sm">Protected environment for members with flexible subscription tiers.</p>
+                </div>
+            </div>
+
+            <p class="mt-6 text-xs text-slate-500 font-mono text-center">
+                * Availability and update frequency may vary depending on product specs and current active plan.
+            </p>
+        </div>
+    </section>
+
+    <!-- Premium Checkers & Tools Section -->
+    <section id="tools" class="py-16 px-4 max-w-7xl mx-auto">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-3">💎 PREMIUM CHECKERS & TOOLS</h2>
+            <p class="text-slate-400 text-sm max-w-xl mx-auto">Authorized Mailbox Management, Sorting & Workflow Utilities</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Card 1 -->
+            <div class="glass-panel p-6 rounded-2xl relative group hover:-translate-y-1 transition-all duration-300">
+                <div class="w-12 h-12 rounded-xl bg-neon/10 border border-neon/30 text-neon flex items-center justify-center text-2xl mb-5 group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-laptop-code"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2 group-hover:text-neon transition-colors">HUNTERS HOTMAIL INBOX CHECKER</h3>
+                <p class="text-slate-400 text-sm leading-relaxed mb-4">Advanced Mailbox management, automated inbox sorting and authorized verification utilities.</p>
+                <div class="flex items-center text-xs font-mono text-neon gap-1">
+                    <span>⚡ High Speed Multi-thread</span>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="glass-panel p-6 rounded-2xl relative group hover:-translate-y-1 transition-all duration-300">
+                <div class="w-12 h-12 rounded-xl bg-cyan-400/10 border border-cyan-400/30 text-cyan-400 flex items-center justify-center text-2xl mb-5 group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-bolt"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">HUNTER MIX CHECKER</h3>
+                <p class="text-slate-400 text-sm leading-relaxed mb-4">Multi-provider mailbox organization tool supporting Hotmail, Outlook, Gmail, Yahoo & Custom Domains.</p>
+                <div class="flex items-center text-xs font-mono text-cyan-400 gap-1">
+                    <span>🌍 Multi-Provider Engine</span>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="glass-panel p-6 rounded-2xl relative group hover:-translate-y-1 transition-all duration-300">
+                <div class="w-12 h-12 rounded-xl bg-purple-400/10 border border-purple-400/30 text-purple-400 flex items-center justify-center text-2xl mb-5 group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-toolbox"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">HUNTER PRO TOOLKIT</h3>
+                <p class="text-slate-400 text-sm leading-relaxed mb-4">Comprehensive suite for custom config filtering, keyword searching, and workflow automation.</p>
+                <div class="flex items-center text-xs font-mono text-purple-400 gap-1">
+                    <span>🛠 Custom Filters & API</span>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="glass-panel p-6 rounded-2xl relative group hover:-translate-y-1 transition-all duration-300">
+                <div class="w-12 h-12 rounded-xl bg-emerald-400/10 border border-emerald-400/30 text-emerald-400 flex items-center justify-center text-2xl mb-5 group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-gamepad"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2 group-hover:text-emerald-400 transition-colors">MINECRAFT & XBOX PRODUCTS</h3>
+                <p class="text-slate-400 text-sm leading-relaxed mb-4">Hand-selected gaming digital items, subscription options, and associated game key codes.</p>
+                <div class="flex items-center text-xs font-mono text-emerald-400 gap-1">
+                    <span>⛏ Gaming Digital Access</span>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="glass-panel p-6 rounded-2xl relative group hover:-translate-y-1 transition-all duration-300 lg:col-span-2">
+                <div class="w-12 h-12 rounded-xl bg-amber-400/10 border border-amber-400/30 text-amber-400 flex items-center justify-center text-2xl mb-5 group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-key"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2 group-hover:text-amber-400 transition-colors">MICROSOFT DIGITAL PRODUCTS</h3>
+                <p class="text-slate-400 text-sm leading-relaxed mb-4">Eligible digital license codes, account management products, subject to real-time availability and service terms.</p>
+                <div class="flex items-center text-xs font-mono text-amber-400 gap-1">
+                    <span>🔑 Instant Digital Keys & Accounts</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Provider Support & Core Features Grid -->
+    <section class="py-16 px-4 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- Supported Providers -->
+            <div class="glass-panel p-8 rounded-3xl border border-slate-800">
+                <h3 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                    <i class="fa-solid fa-globe text-neon"></i> SUPPORTED PROVIDERS
+                </h3>
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-6">
+                    <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 text-center font-mono text-sm text-slate-200">
+                        <i class="fa-brands fa-microsoft text-blue-400 mb-2 block text-xl"></i> Outlook
+                    </div>
+                    <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 text-center font-mono text-sm text-slate-200">
+                        <i class="fa-solid fa-envelope text-red-400 mb-2 block text-xl"></i> Hotmail
+                    </div>
+                    <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 text-center font-mono text-sm text-slate-200">
+                        <i class="fa-brands fa-google text-emerald-400 mb-2 block text-xl"></i> Gmail
+                    </div>
+                    <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 text-center font-mono text-sm text-slate-200">
+                        <i class="fa-brands fa-yahoo text-purple-400 mb-2 block text-xl"></i> Yahoo
+                    </div>
+                    <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 text-center font-mono text-sm text-slate-200">
+                        <i class="fa-solid fa-layer-group text-neon mb-2 block text-xl"></i> MIX Data
+                    </div>
+                    <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 text-center font-mono text-sm text-slate-200">
+                        <i class="fa-solid fa-server text-cyan-400 mb-2 block text-xl"></i> Custom Domains
+                    </div>
+                </div>
+                <div class="space-y-3 text-sm text-slate-300 font-light">
+                    <p class="flex items-center gap-2"><i class="fa-solid fa-check text-neon"></i> Smart search, automated indexing, and sorting workflows.</p>
+                    <p class="flex items-center gap-2"><i class="fa-solid fa-check text-neon"></i> Private workspace tailored to chosen subscription level.</p>
+                </div>
+            </div>
+
+            <!-- Core Features -->
+            <div class="glass-panel p-8 rounded-3xl border border-slate-800">
+                <h3 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                    <i class="fa-solid fa-gears text-neon"></i> CORE FEATURES
+                </h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 font-mono text-xs text-slate-300">
+                    <div class="p-3 rounded-lg bg-slate-900/50 border border-slate-800/80 flex items-center gap-2">
+                        <i class="fa-solid fa-circle-check text-neon"></i> Email & Mailbox Mgmt
+                    </div>
+                    <div class="p-3 rounded-lg bg-slate-900/50 border border-slate-800/80 flex items-center gap-2">
+                        <i class="fa-solid fa-circle-check text-neon"></i> HTML Email Viewer
+                    </div>
+                    <div class="p-3 rounded-lg bg-slate-900/50 border border-slate-800/80 flex items-center gap-2">
+                        <i class="fa-solid fa-circle-check text-neon"></i> Smart Search & Filters
+                    </div>
+                    <div class="p-3 rounded-lg bg-slate-900/50 border border-slate-800/80 flex items-center gap-2">
+                        <i class="fa-solid fa-circle-check text-neon"></i> Multi-Keyword Search
+                    </div>
+                    <div class="p-3 rounded-lg bg-slate-900/50 border border-slate-800/80 flex items-center gap-2">
+                        <i class="fa-solid fa-circle-check text-neon"></i> Custom Configuration
+                    </div>
+                    <div class="p-3 rounded-lg bg-slate-900/50 border border-slate-800/80 flex items-center gap-2">
+                        <i class="fa-solid fa-circle-check text-neon"></i> Workflow Automation
+                    </div>
+                    <div class="p-3 rounded-lg bg-slate-900/50 border border-slate-800/80 flex items-center gap-2">
+                        <i class="fa-solid fa-circle-check text-neon"></i> API / Webhook Integration
+                    </div>
+                    <div class="p-3 rounded-lg bg-slate-900/50 border border-slate-800/80 flex items-center gap-2">
+                        <i class="fa-solid fa-circle-check text-neon"></i> High Optimization
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Demonstrations Section -->
+    <section id="demos" class="py-16 px-4 max-w-7xl mx-auto">
+        <div class="text-center mb-12">
+            <span class="text-neon text-xs font-mono uppercase tracking-widest block mb-1">Live Walkthroughs</span>
+            <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-3">🎬 VIDEO DEMONSTRATIONS</h2>
+            <p class="text-slate-400 text-sm">See Hunter Cloud tools in action with complete setup guides</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Demo 1 -->
+            <div class="glass-panel p-6 rounded-3xl border border-slate-800 flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="px-3 py-1 rounded-full bg-cyber-accent/10 border border-cyber-accent/30 text-cyber-accent text-xs font-mono font-bold">
+                            📌 HOTMAIL CHECKER
+                        </span>
+                        <span class="text-xs text-slate-500 font-mono">Full Video</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Hotmail Checker Walkthrough</h3>
+                    <p class="text-slate-400 text-sm mb-6">Complete demonstration of inbox organization, proxy setup, and feature walkthrough.</p>
+                </div>
+
+                <div class="relative rounded-2xl overflow-hidden bg-slate-950 border border-slate-800 aspect-video group">
+                    <iframe class="w-full h-full rounded-2xl" src="https://www.youtube.com/embed/b-e3hBdbQzw" title="Hotmail Checker Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                
+                <div class="mt-6 text-center">
+                    <a href="https://youtu.be/b-e3hBdbQzw?si=1zl3bnuhS9UBHMim" target="_blank" class="inline-flex items-center gap-2 text-cyber-accent hover:text-white font-mono text-sm uppercase font-bold transition-colors">
+                        ▶ Watch On YouTube <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Demo 2 -->
+            <div class="glass-panel p-6 rounded-3xl border border-slate-800 flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="px-3 py-1 rounded-full bg-neon/10 border border-neon/30 text-neon text-xs font-mono font-bold">
+                            📌 MIX CHECKER
+                        </span>
+                        <span class="text-xs text-slate-500 font-mono">Usage Guide</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">MIX Checker Feature Guide</h3>
+                    <p class="text-slate-400 text-sm mb-6">Step-by-step tutorial showing multi-provider sorting, keyword search filters, and speed test.</p>
+                </div>
+
+                <div class="relative rounded-2xl overflow-hidden bg-slate-950 border border-slate-800 aspect-video group">
+                    <iframe class="w-full h-full rounded-2xl" src="https://www.youtube.com/embed/6M6Aezrcyfk" title="Mix Checker Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+
+                <div class="mt-6 text-center">
+                    <a href="https://youtu.be/6M6Aezrcyfk" target="_blank" class="inline-flex items-center gap-2 text-neon hover:text-white font-mono text-sm uppercase font-bold transition-colors">
+                        ▶ Watch On YouTube <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing & Plans Section -->
+    <section id="plans" class="py-16 px-4 max-w-7xl mx-auto">
+        <div class="text-center mb-12">
+            <span class="text-neon text-xs font-mono uppercase tracking-widest block mb-1">Transparent Subscription Tiers</span>
+            <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-4">💎 CLOUD & LOG ACCESS PLANS</h2>
+            <p class="text-slate-400 text-sm max-w-xl mx-auto">Choose your preferred private cloud tier or dedicated access key</p>
+        </div>
+
+        <!-- Hotmail & Mix Cloud Plans -->
+        <h3 class="text-xl font-bold text-neon font-mono mb-6 flex items-center gap-2">
+            🚀 PREMIUM HOTMAIL & MIX CLOUD PLANS
+        </h3>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+            <!-- 3 Days -->
+            <div class="glass-panel p-6 rounded-2xl border border-slate-800 flex flex-col justify-between">
+                <div>
+                    <div class="text-xs text-slate-400 font-mono">STARTER TRIAL</div>
+                    <div class="text-2xl font-bold text-white mt-1">3 DAYS ACCESS</div>
+                    <div class="text-4xl font-extrabold text-neon my-4">$15</div>
+                    <ul class="text-sm text-slate-300 space-y-2 font-mono">
+                        <li>✔️ Full Cloud Access</li>
+                        <li>✔️ Daily Fresh Updates</li>
+                        <li>✔️ Community Support</li>
+                    </ul>
+                </div>
+                <a href="https://t.me/Hunter_Rok" target="_blank" class="mt-6 w-full py-2.5 rounded-lg bg-slate-800 text-white font-bold text-xs uppercase text-center hover:bg-neon hover:text-slate-950 transition-colors">Order 3 Days</a>
+            </div>
+
+            <!-- 1 Week -->
+            <div class="glass-panel p-6 rounded-2xl border border-slate-800 flex flex-col justify-between">
+                <div>
+                    <div class="text-xs text-slate-400 font-mono">WEEKLY PASS</div>
+                    <div class="text-2xl font-bold text-white mt-1">1 WEEK ACCESS</div>
+                    <div class="text-4xl font-extrabold text-neon my-4">$25</div>
+                    <ul class="text-sm text-slate-300 space-y-2 font-mono">
+                        <li>✔️ Full Cloud Access</li>
+                        <li>✔️ High Speed Shared Data</li>
+                        <li>✔️ Standard Tool Access</li>
+                    </ul>
+                </div>
+                <a href="https://t.me/Hunter_Rok" target="_blank" class="mt-6 w-full py-2.5 rounded-lg bg-slate-800 text-white font-bold text-xs uppercase text-center hover:bg-neon hover:text-slate-950 transition-colors">Order 1 Week</a>
+            </div>
+
+            <!-- 2 Weeks -->
+            <div class="glass-panel p-6 rounded-2xl border border-slate-800 flex flex-col justify-between">
+                <div>
+                    <div class="text-xs text-slate-400 font-mono">BI-WEEKLY</div>
+                    <div class="text-2xl font-bold text-white mt-1">2 WEEKS ACCESS</div>
+                    <div class="text-4xl font-extrabold text-neon my-4">$40</div>
+                    <ul class="text-sm text-slate-300 space-y-2 font-mono">
+                        <li>✔️ Full Cloud Access</li>
+                        <li>✔️ Daily Fresh Feed</li>
+                        <li>✔️ Dedicated Utilities</li>
+                    </ul>
+                </div>
+                <a href="https://t.me/Hunter_Rok" target="_blank" class="mt-6 w-full py-2.5 rounded-lg bg-slate-800 text-white font-bold text-xs uppercase text-center hover:bg-neon hover:text-slate-950 transition-colors">Order 2 Weeks</a>
+            </div>
+
+            <!-- 1 Month (Popular) -->
+            <div class="glass-panel p-6 rounded-2xl border-2 border-neon relative flex flex-col justify-between glow-effect">
+                <span class="absolute -top-3 right-6 bg-neon text-slate-950 font-mono font-bold text-[10px] uppercase px-3 py-1 rounded-full">POPULAR</span>
+                <div>
+                    <div class="text-xs text-neon font-mono">MONTHLY VALUE</div>
+                    <div class="text-2xl font-bold text-white mt-1">1 MONTH ACCESS</div>
+                    <div class="text-4xl font-extrabold text-neon my-4">$50</div>
+                    <ul class="text-sm text-slate-300 space-y-2 font-mono">
+                        <li>✔️ Full Cloud Access</li>
+                        <li>✔️ Priority Data Feeds</li>
+                        <li>✔️ Full Tool Compatibility</li>
+                    </ul>
+                </div>
+                <a href="https://t.me/Hunter_Rok" target="_blank" class="mt-6 w-full py-3 rounded-lg bg-neon text-slate-950 font-extrabold text-xs uppercase text-center hover:bg-neon-hover transition-colors">Order 1 Month</a>
+            </div>
+
+            <!-- 3 Months -->
+            <div class="glass-panel p-6 rounded-2xl border border-slate-800 flex flex-col justify-between">
+                <div>
+                    <div class="text-xs text-slate-400 font-mono">QUARTERLY PASS</div>
+                    <div class="text-2xl font-bold text-white mt-1">3 MONTHS ACCESS</div>
+                    <div class="text-4xl font-extrabold text-neon my-4">$120</div>
+                    <ul class="text-sm text-slate-300 space-y-2 font-mono">
+                        <li>✔️ Save Extra $30</li>
+                        <li>✔️ VIP Cloud Channels</li>
+                        <li>✔️ Direct Admin Priority</li>
+                    </ul>
+                </div>
+                <a href="https://t.me/Hunter_Rok" target="_blank" class="mt-6 w-full py-2.5 rounded-lg bg-slate-800 text-white font-bold text-xs uppercase text-center hover:bg-neon hover:text-slate-950 transition-colors">Order 3 Months</a>
+            </div>
+
+            <!-- Lifetime -->
+            <div class="glass-panel p-6 rounded-2xl border border-amber-400/50 flex flex-col justify-between">
+                <div>
+                    <div class="text-xs text-amber-400 font-mono">ULTIMATE UNLIMITED</div>
+                    <div class="text-2xl font-bold text-white mt-1">👑 LIFETIME ACCESS</div>
+                    <div class="text-4xl font-extrabold text-amber-400 my-4">$400</div>
+                    <ul class="text-sm text-slate-300 space-y-2 font-mono">
+                        <li>✔️ Permanent Cloud Membership</li>
+                        <li>✔️ All Future Updates Included</li>
+                        <li>✔️ VIP Dedicated Support</li>
+                    </ul>
+                </div>
+                <a href="https://t.me/Hunter_Rok" target="_blank" class="mt-6 w-full py-2.5 rounded-lg bg-amber-400 text-slate-950 font-extrabold text-xs uppercase text-center hover:bg-amber-300 transition-colors">Get Lifetime</a>
+            </div>
+        </div>
+
+        <!-- Private LOG & ULP Tiers -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Private LOG Access -->
+            <div class="glass-panel p-8 rounded-3xl border border-neon/30">
+                <h3 class="text-2xl font-bold text-white mb-2 flex items-center gap-3">
+                    <i class="fa-solid fa-key text-neon"></i> PRIVATE LOG ACCESS
+                </h3>
+                <p class="text-slate-400 text-xs font-mono mb-6">Exclusive high-quality Log streams for power users</p>
+
+                <div class="space-y-4 font-mono">
+                    <div class="flex items-center justify-between p-4 rounded-xl bg-slate-900/80 border border-slate-800">
+                        <span class="text-slate-200">💵 Weekly Pass</span>
+                        <span class="text-neon font-bold text-xl">$50 ⚡</span>
+                    </div>
+                    <div class="flex items-center justify-between p-4 rounded-xl bg-slate-900/80 border border-slate-800">
+                        <span class="text-slate-200">💵 Monthly Pass</span>
+                        <span class="text-neon font-bold text-xl">$150 ⚡</span>
+                    </div>
+                    <div class="flex items-center justify-between p-4 rounded-xl bg-slate-900/80 border border-neon/40">
+                        <span class="text-amber-400 font-bold">👑 Lifetime Pass</span>
+                        <span class="text-amber-400 font-bold text-xl">$600 ⚡</span>
+                    </div>
+                </div>
+
+                <a href="https://t.me/Hunter_Rok" target="_blank" class="mt-6 block w-full py-3 rounded-xl bg-neon text-slate-950 font-bold text-xs uppercase tracking-wider text-center hover:bg-neon-hover transition-colors">
+                    Request Private LOG Access
+                </a>
+            </div>
+
+            <!-- Private ULP Access -->
+            <div class="glass-panel p-8 rounded-3xl border border-cyber-accent/30">
+                <h3 class="text-2xl font-bold text-white mb-2 flex items-center gap-3">
+                    <i class="fa-solid fa-fire text-cyber-accent"></i> PRIVATE ULP ACCESS
+                </h3>
+                <p class="text-slate-400 text-xs font-mono mb-6">Dedicated User-Pass & Combo access feeds</p>
+
+                <div class="space-y-4 font-mono">
+                    <div class="flex items-center justify-between p-4 rounded-xl bg-slate-900/80 border border-slate-800">
+                        <span class="text-slate-200">💵 Weekly Access</span>
+                        <span class="text-cyber-accent font-bold text-xl">$50 🔥</span>
+                    </div>
+                    <div class="flex items-center justify-between p-4 rounded-xl bg-slate-900/80 border border-slate-800">
+                        <span class="text-slate-200">💵 Monthly Access</span>
+                        <span class="text-cyber-accent font-bold text-xl">$100 🔥</span>
+                    </div>
+                </div>
+
+                <a href="https://t.me/Hunter_Rok" target="_blank" class="mt-8 block w-full py-3 rounded-xl bg-cyber-accent text-white font-bold text-xs uppercase tracking-wider text-center hover:bg-red-600 transition-colors">
+                    Request Private ULP Access
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Data Services & Supported Regions -->
+    <section class="py-16 px-4 max-w-7xl mx-auto">
+        <div class="glass-panel p-8 md:p-10 rounded-3xl border border-slate-800">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-extrabold text-white mb-2">📧 HOTMAIL / OUTLOOK / MIX DATA SERVICES</h2>
+                <p class="text-slate-400 text-sm">Authorized Mailbox Testing • Custom Requests • Global Coverage</p>
+            </div>
+
+            <div class="mb-8">
+                <h3 class="text-sm font-mono text-neon uppercase tracking-wider mb-4 text-center">Supported Regions</h3>
+                <div class="flex flex-wrap justify-center gap-3">
+                    <span class="px-4 py-2 rounded-xl bg-slate-900/90 border border-slate-800 text-white font-mono text-sm">🇺🇸 USA</span>
+                    <span class="px-4 py-2 rounded-xl bg-slate-900/90 border border-slate-800 text-white font-mono text-sm">🇨🇦 Canada</span>
+                    <span class="px-4 py-2 rounded-xl bg-slate-900/90 border border-slate-800 text-white font-mono text-sm">🇬🇧 UK</span>
+                    <span class="px-4 py-2 rounded-xl bg-slate-900/90 border border-slate-800 text-white font-mono text-sm">🇩🇪 Germany</span>
+                    <span class="px-4 py-2 rounded-xl bg-slate-900/90 border border-slate-800 text-white font-mono text-sm">🇫🇷 France</span>
+                    <span class="px-4 py-2 rounded-xl bg-slate-900/90 border border-slate-800 text-white font-mono text-sm">🇮🇹 Italy</span>
+                    <span class="px-4 py-2 rounded-xl bg-slate-900/90 border border-slate-800 text-white font-mono text-sm">🇪🇸 Spain</span>
+                    <span class="px-4 py-2 rounded-xl bg-slate-900/90 border border-slate-800 text-white font-mono text-sm">🇨🇴 Colombia</span>
+                    <span class="px-4 py-2 rounded-xl bg-slate-900/90 border border-slate-800 text-white font-mono text-sm">🇵🇪 Peru</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 text-xs font-mono text-slate-300">
+                <div class="p-4 rounded-xl bg-slate-900/50 border border-slate-800">📌 Custom requirements accepted</div>
+                <div class="p-4 rounded-xl bg-slate-900/50 border border-slate-800">📌 Pricing depends on selected service</div>
+                <div class="p-4 rounded-xl bg-slate-900/50 border border-slate-800">📌 Bulk service inquiries welcome</div>
+                <div class="p-4 rounded-xl bg-slate-900/50 border border-slate-800">📌 Availability confirmed prior order</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RDP / VPS Hosting Plans Section -->
+    <section id="vps" class="py-16 px-4 max-w-7xl mx-auto">
+        <div class="text-center mb-12">
+            <span class="text-neon text-xs font-mono uppercase tracking-widest block mb-1">⚡ High Performance Cloud Infrastructure</span>
+            <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-3">🚀 HUNTER_HUB RDP / VPS HOSTING</h2>
+            <p class="text-slate-400 text-sm max-w-xl mx-auto">Ultra-fast NVMe SSD storage, 10 Gbps network ports, and dedicated vCPU power.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+            <!-- VPS Plan 1 -->
+            <div class="glass-panel p-6 rounded-2xl border border-slate-800 flex flex-col justify-between">
+                <div>
+                    <div class="text-xs text-neon font-mono font-bold">1️⃣ STARTER VPS</div>
+                    <div class="text-3xl font-extrabold text-amber-400 my-3">$10 <span class="text-xs text-slate-400 font-normal">/mo</span></div>
+                    <ul class="text-xs text-slate-300 space-y-3 font-mono border-t border-slate-800 pt-4">
+                        <li>💖 <strong>4 GB</strong> RAM</li>
+                        <li>💖 <strong>2 vCPU</strong> Cores</li>
+                        <li>💖 <strong>25 GB</strong> NVMe SSD</li>
+                        <li>💖 <strong>4 TB</strong> Bandwidth</li>
+                        <li>💖 <strong>10 Gbps</strong> Network</li>
+                    </ul>
+                </div>
+                <a href="https://t.me/Hunter_Rok" target="_blank" class="mt-6 w-full py-2.5 rounded-lg bg-slate-800 text-white font-bold text-xs uppercase text-center hover:bg-neon hover:text-slate-950 transition-colors">Deploy Starter</a>
+            </div>
+
+            <!-- VPS Plan 2 -->
+            <div class="glass-panel p-6 rounded-2xl border border-slate-800 flex flex-col justify-between">
+                <div>
+                    <div class="text-xs text-neon font-mono font-bold">2️⃣ STANDARD VPS</div>
+                    <div class="text-3xl font-extrabold text-amber-400 my-3">$15 <span class="text-xs text-slate-400 font-normal">/mo</span></div>
+                    <ul class="text-xs text-slate-300 space-y-3 font-mono border-t border-slate-800 pt-4">
+                        <li>💖 <strong>8 GB</strong> RAM</li>
+                        <li>💖 <strong>4 vCPU</strong> Cores</li>
+                        <li>💖 <strong>50 GB</strong> NVMe SSD</li>
+                        <li>💖 <strong>4 TB</strong> Bandwidth</li>
+                        <li>💖 <strong>10 Gbps</strong> Network</li>
+                    </ul>
+                </div>
+                <a href="https://t.me/Hunter_Rok" target="_blank" class="mt-6 w-full py-2.5 rounded-lg bg-slate-800 text-white font-bold text-xs uppercase text-center hover:bg-neon hover:text-slate-950 transition-colors">Deploy Standard</a>
+            </div>
+
+            <!-- VPS Plan 3 -->
+            <div class="glass-panel p-6 rounded-2xl border-2 border-neon flex flex-col justify-between glow-effect relative">
+                <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-neon text-slate-950 font-mono font-bold text-[9px] uppercase px-2 py-0.5 rounded">RECOMMENDED</span>
+                <div>
+                    <div class="text-xs text-neon font-mono font-bold">3️⃣ PRO VPS</div>
+                    <div class="text-3xl font-extrabold text-amber-400 my-3">$30 <span class="text-xs text-slate-400 font-normal">/mo</span></div>
+                    <ul class="text-xs text-slate-300 space-y-3 font-mono border-t border-slate-800 pt-4">
+                        <li>💖 <strong>16 GB</strong> RAM</li>
+                        <li>💖 <strong>6 vCPU</strong> Cores</li>
+                        <li>💖 <strong>100 GB</strong> NVMe SSD</li>
+                        <li>💖 <strong>8 TB</strong> Bandwidth</li>
+                        <li>💖 <strong>10 Gbps</strong> Network</li>
+                    </ul>
+                </div>
+                <a href="https://t.me/Hunter_Rok" target="_blank" class="mt-6 w-full py-2.5 rounded-lg bg-neon text-slate-950 font-extrabold text-xs uppercase text-center hover:bg-neon-hover transition-colors">Deploy Pro</a>
+            </div>
+
+            <!-- VPS Plan 4 -->
+            <div class="glass-panel p-6 rounded-2xl border border-slate-800 flex flex-col justify-between">
+                <div>
+                    <div class="text-xs text-neon font-mono font-bold">4️⃣ ADVANCED VPS</div>
+                    <div class="text-3xl font-extrabold text-amber-400 my-3">$50 <span class="text-xs text-slate-400 font-normal">/mo</span></div>
+                    <ul class="text-xs text-slate-300 space-y-3 font-mono border-t border-slate-800 pt-4">
+                        <li>💖 <strong>32 GB</strong> RAM</li>
+                        <li>💖 <strong>8 vCPU</strong> Cores</li>
+                        <li>💖 <strong>200 GB</strong> NVMe SSD</li>
+                        <li>💖 <strong>16 TB</strong> Bandwidth</li>
+                        <li>💖 <strong>10 Gbps</strong> Network</li>
+                    </ul>
+                </div>
+                <a href="https://t.me/Hunter_Rok" target="_blank" class="mt-6 w-full py-2.5 rounded-lg bg-slate-800 text-white font-bold text-xs uppercase text-center hover:bg-neon hover:text-slate-950 transition-colors">Deploy Advanced</a>
+            </div>
+
+            <!-- VPS Plan 5 -->
+            <div class="glass-panel p-6 rounded-2xl border border-amber-400/40 flex flex-col justify-between">
+                <div>
+                    <div class="text-xs text-amber-400 font-mono font-bold">5️⃣ ULTIMATE VPS</div>
+                    <div class="text-3xl font-extrabold text-amber-400 my-3">$90 <span class="text-xs text-slate-400 font-normal">/mo</span></div>
+                    <ul class="text-xs text-slate-300 space-y-3 font-mono border-t border-slate-800 pt-4">
+                        <li>💖 <strong>60 GB</strong> RAM</li>
+                        <li>💖 <strong>10 vCPU</strong> Cores</li>
+                        <li>💖 <strong>400 GB</strong> NVMe SSD</li>
+                        <li>💖 <strong>40 TB</strong> Bandwidth</li>
+                        <li>💖 <strong>10 Gbps</strong> Network</li>
+                    </ul>
+                </div>
+                <a href="https://t.me/Hunter_Rok" target="_blank" class="mt-6 w-full py-2.5 rounded-lg bg-amber-400 text-slate-950 font-bold text-xs uppercase text-center hover:bg-amber-300 transition-colors">Deploy Ultimate</a>
+            </div>
+        </div>
+
+        <!-- VPS Feature Highlights -->
+        <div class="mt-12 glass-panel p-6 rounded-2xl border border-slate-800">
+            <h4 class="text-center text-white font-bold mb-6 text-lg">⭐️ WHY CHOOSE HUNTER_HUB VPS? ⭐️</h4>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 text-center font-mono text-xs text-slate-300">
+                <div class="p-3 bg-slate-900/60 rounded-xl border border-slate-800">💎 NVMe SSD Storage</div>
+                <div class="p-3 bg-slate-900/60 rounded-xl border border-slate-800">⚡ 10 Gbps Network</div>
+                <div class="p-3 bg-slate-900/60 rounded-xl border border-slate-800">🚀 Instant Setup</div>
+                <div class="p-3 bg-slate-900/60 rounded-xl border border-slate-800">💻 Multiple OS Options</div>
+                <div class="p-3 bg-slate-900/60 rounded-xl border border-slate-800">💰 Flexible Pricing</div>
+                <div class="p-3 bg-slate-900/60 rounded-xl border border-slate-800">🛡️ High Performance</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community & Payment Section -->
+    <section class="py-16 px-4 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Payment Methods -->
+            <div class="glass-panel p-8 rounded-3xl border border-slate-800 flex flex-col justify-between">
+                <div>
+                    <h3 class="text-2xl font-bold text-white mb-2 flex items-center gap-3">
+                        <i class="fa-solid fa-wallet text-neon"></i> ACCEPTED PAYMENT METHODS
+                    </h3>
+                    <p class="text-slate-400 text-xs font-mono mb-6">Fast and secure global transaction modes</p>
+
+                    <div class="grid grid-cols-2 gap-4 font-mono text-sm">
+                        <div class="p-5 rounded-2xl bg-slate-900/90 border border-slate-800 flex items-center gap-3 text-white">
+                            <i class="fa-brands fa-bitcoin text-amber-400 text-3xl"></i>
+                            <div>
+                                <div class="font-bold">CRYPTO</div>
+                                <div class="text-[10px] text-slate-400">BTC, USDT, LTC, ETH</div>
+                            </div>
+                        </div>
+
+                        <div class="p-5 rounded-2xl bg-slate-900/90 border border-slate-800 flex items-center gap-3 text-white">
+                            <i class="fa-brands fa-paypal text-blue-400 text-3xl"></i>
+                            <div>
+                                <div class="font-bold">PAYPAL</div>
+                                <div class="text-[10px] text-slate-400">Verified Transfer</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-6 p-4 rounded-xl bg-neon/10 border border-neon/30 text-neon text-xs font-mono text-center">
+                    ❤️‍🔥 CHECK AVAILABILITY BEFORE ORDERING
+                </div>
+            </div>
+
+            <!-- Join Community -->
+            <div class="glass-panel p-8 rounded-3xl border border-neon/30 flex flex-col justify-between">
+                <div>
+                    <h3 class="text-2xl font-bold text-white mb-2 flex items-center gap-3">
+                        <i class="fa-solid fa-users text-neon"></i> JOIN OUR COMMUNITY
+                    </h3>
+                    <p class="text-slate-400 text-xs font-mono mb-6">Stay Connected • Get Daily Updates • Customer Feedback</p>
+
+                    <div class="space-y-3 font-mono text-sm">
+                        <a href="https://t.me/HunterCloud_Hub" target="_blank" class="p-4 rounded-xl bg-slate-900/90 border border-slate-800 flex items-center justify-between text-white hover:border-neon transition-colors group">
+                            <span class="flex items-center gap-3"><i class="fa-brands fa-telegram text-neon text-xl"></i> JOIN MAIN CHANNEL</span>
+                            <i class="fa-solid fa-arrow-right text-neon group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+
+                        <a href="https://t.me/HunterCloudreview" target="_blank" class="p-4 rounded-xl bg-slate-900/90 border border-slate-800 flex items-center justify-between text-white hover:border-amber-400 transition-colors group">
+                            <span class="flex items-center gap-3"><i class="fa-solid fa-star text-amber-400 text-xl"></i> VIEW REVIEWS</span>
+                            <i class="fa-solid fa-arrow-right text-amber-400 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+
+                        <a href="https://t.me/Hunter_Rok" target="_blank" class="p-4 rounded-xl bg-slate-900/90 border border-slate-800 flex items-center justify-between text-white hover:border-cyan-400 transition-colors group">
+                            <span class="flex items-center gap-3"><i class="fa-solid fa-paper-plane text-cyan-400 text-xl"></i> DIRECT ADMIN @Hunter_Rok</span>
+                            <i class="fa-solid fa-arrow-right text-cyan-400 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="border-t border-slate-800 py-10 px-4 text-center">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-mono text-slate-500">
+            <div>
+                © 2026 HUNTER CLOUD • HUNTER_HUB. All rights reserved.
+            </div>
+            <div class="text-neon tracking-widest">
+                HUNTER CLOUD HQ • YOUR COMMUNITY, YOUR NETWORK
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
